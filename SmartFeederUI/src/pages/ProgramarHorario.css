@@ -1,0 +1,68 @@
+.horario-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+.horario-box {
+  width: 460px;
+  background: white;
+  padding: 40px 45px;
+  border-radius: 20px;
+  border: 1px solid #e6e8ec;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.horario-box h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #1e293b;
+}
+
+.horario-box span {
+  color: #9ed39e;
+}
+
+.horario-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  font-weight: 600;
+  color: #374151;
+}
+
+input {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #CBD5E1;
+  background: #F8FAFC;
+  font-size: 1rem;
+}
+
+input:focus {
+  border-color: #3b82f6;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.3);
+  outline: none;
+}
+
+.btn-save {
+  margin-top: 10px;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background: #9ed39e;
+  color: #2c2f33;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-save:hover {
+  background: #7aa07a;
+}

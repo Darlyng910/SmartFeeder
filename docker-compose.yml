@@ -1,0 +1,38 @@
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: smartfeeder-sqlserver
+    environment:
+      SA_PASSWORD: "Password123!"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    networks:
+      - backend
+
+  smartfeeder-api:
+    build:
+      context: ./SmartFeederApi
+    container_name: SmartFeederApi
+    ports:
+      - "8001:8080"
+    depends_on:
+      - db
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=smartfeeder-sqlserver;Database=SmartFeederDB;User Id=sa;Password=Password123!;Encrypt=False;TrustServerCertificate=True;
+    networks:
+      - backend
+
+  scheduler:
+    build:
+      context: ./SmartFeederScheduler
+    container_name: smartfeeder-scheduler
+    depends_on:
+      - smartfeeder-api
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge

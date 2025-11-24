@@ -1,0 +1,98 @@
+.home {
+  padding: 20px 0;
+}
+
+.home h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #1e293b;
+  letter-spacing: -1px;
+}
+
+.mascota-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 28px;
+}
+
+.mascota-card {
+  background: #ffffff;
+  padding: 32px 22px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+  transition: all 0.25s ease;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mascota-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+  border-color: #d1d5db;
+}
+
+.mascota-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.mascota-icon.add {
+  opacity: 0.8;
+}
+
+.mascota-icon.add:hover {
+  opacity: 1;
+}
+
+.especie {
+  color: #6b7280;
+  font-size: 1rem;
+  margin-top: 4px;
+}
+
+.agregar {
+  background: #eef8ee;
+  border: 2px dashed #9ed39e;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.agregar:hover {
+  background: #e1f3e1;
+  border-color: #8acb8a;
+}
+
+.add-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mascota-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.mascota-card {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mascota-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}

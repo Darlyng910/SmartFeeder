@@ -1,0 +1,71 @@
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.header-icon {
+  width: 48px;
+  height: 48px;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 700;
+  color: #2c2f33;
+}
+
+.tabla-wrapper {
+  padding: 40px;
+}
+
+.tabla-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c2f33;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+}
+
+.tabla th {
+  background: #2c2f33;
+  color: white;
+  padding: 14px;
+  text-align: left;
+}
+
+.tabla td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.tabla tr:hover td {
+  background: #f4fff4;
+}
+
+.btn-eliminar {
+  background: #e63946;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-eliminar:hover {
+  background: #c82333;
+}
